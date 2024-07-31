@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import { Popover, Steps, Input, Tooltip, Button, Space } from "antd";
+import { Popover, Steps, Input, Space } from "antd";
 import { InfoCircleOutlined, UserOutlined, EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 const First = () => {
   const customDot = (dot, { status, index }) => (

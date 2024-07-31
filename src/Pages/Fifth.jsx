@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import { Popover, Steps } from "antd";
 import { Input, Space } from "antd";
-const Second = () => {
+const Fifth = () => {
   const customDot = (dot, { status, index }) => (
     <Popover
       content={
@@ -22,7 +22,7 @@ const Second = () => {
       <div className=" flex justify-center items-center p-8">
         <div className="progress flex justify-center w-3/4">
         <Steps
-            current={1}
+            current={4}
             progressDot={customDot}
             items={[
               {
@@ -57,13 +57,13 @@ const Second = () => {
       </div>
       <div className="form">
         <Space direction="vertical">
-        <Input placeholder="Household Size" />
-        <Input placeholder="Dependents" />
-        <Input placeholder="Family Income" />
+        <Input className="loans" placeholder="Current Loans" />
+        <Input className="debt" placeholder="Credit Card Debt" />
+        <Input className="obligations" placeholder="Other Obligations" />
         </Space>
       </div>
     </>
   );
 };
 
-export default Second;
+export default Fifth;
