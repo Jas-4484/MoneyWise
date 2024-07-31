@@ -22,21 +22,30 @@ const First = () => {
       <div className=" flex justify-center items-center p-8">
         <div className="progress flex justify-center w-3/4">
           <Steps
-            current={2}
+            current={0}
             progressDot={customDot}
             items={[
               {
-                title: "Finished",
+                title: "Personal Details",
               },
               {
-                title: "In Progress",
+                title: "Family Background",
               },
               {
-                title: "Waiting",
+                title: "Career Details",
               },
               {
-                title: "Waiting",
+                title: "Expenses",
               },
+              {
+                title: "Risk Appetite",
+              },
+              {
+                title:"Financial Goals",
+              },
+              {
+                title:"Existing Debts",
+              }
             ]}
           />
         </div>

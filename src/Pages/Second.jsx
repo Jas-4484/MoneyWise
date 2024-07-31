@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar";
 import { Popover, Steps } from "antd";
 
-const First = () => {
+const Second = () => {
   const customDot = (dot, { status, index }) => (
     <Popover
       content={
@@ -21,22 +21,32 @@ const First = () => {
       </div>
       <div className=" flex justify-center items-center p-8">
         <div className="progress flex justify-center w-3/4">
-          <Steps
-            current={2}
+        <Steps
+            current={1}
             progressDot={customDot}
             items={[
               {
-                title: "Finished",
+                title: "Personal Details",
               },
               {
-                title: "In Progress",
+                title: "Family Background",
               },
               {
-                title: "Waiting",
+                title: "Career Details",
               },
               {
-                title: "Waiting",
+                title: "Expenses",
               },
+              {
+                title:"Existing Debts",
+              }
+              ,
+              {
+                title: "Risk Appetite",
+              },
+              {
+                title:"Financial Goals",
+              }
             ]}
           />
         </div>
@@ -52,4 +62,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default Second;
