@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
-import { Popover, Steps } from "antd";
-
+import { Popover, Steps, Input, Tooltip, Button, Space } from "antd";
+import { InfoCircleOutlined, UserOutlined, EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 const First = () => {
   const customDot = (dot, { status, index }) => (
     <Popover
@@ -14,6 +14,7 @@ const First = () => {
       {dot}
     </Popover>
   );
+  const [passwordVisible, setPasswordVisible] = React.useState(false);
   return (
     <>
       <div>
@@ -55,8 +56,64 @@ const First = () => {
         <h1 className="font-['Jura'] text-center">Fill out general information</h1>
       </div>
       <div className="form">
-
+      <Space direction="vertical" className="formFirst">
+        <Space direction="horizontal">
+          <Input className="username"
+            placeholder="Enter your username"
+            prefix={
+              <UserOutlined
+                style={{
+                  color: 'rgba(0,0,0,.25)',
+                }}
+              />
+            }
+            // suffix={
+            //   <Tooltip title="Extra information">
+            //     <InfoCircleOutlined
+            //       style={{
+            //         color: 'rgba(0,0,0,.45)',
+            //       }}
+            //     />
+            //   </Tooltip>
+            // }
+          />
+          <Input className="username"
+            placeholder="Enter your Name"
+            prefix={
+              <UserOutlined
+                style={{
+                  color: 'rgba(0,0,0,.25)',
+                }}
+              />
+            }
+            // suffix={
+            //   <Tooltip title="Extra information">
+            //     <InfoCircleOutlined
+            //       style={{
+            //         color: 'rgba(0,0,0,.45)',
+            //       }}
+            //     />
+            //   </Tooltip>
+            // }
+          /> 
+        </Space>
+        <Space direction="horizontal">
+          <Input className="age" placeholder="Enter your age" />
+          <Input className="gender" placeholder="Enter your gender" />
+        </Space>
+        <Space direction="horizontal">
+          <Input className="email" placeholder="Enter your email" />
+          <Input.Password
+          placeholder="Input password"
+          iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+          />
+        </Space>
+        
+        
+        
+      </Space>
       </div>
+      
     </>
   );
 };
