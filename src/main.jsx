@@ -11,6 +11,8 @@ import Fourth from "./Pages/Fouth.jsx";
 import Fifth from "./Pages/Fifth.jsx";
 import Sixth from "./Pages/Sixth.jsx";
 import Seventh from "./Pages/Seventh.jsx";
+import Result from "./Pages/Result.jsx";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
@@ -23,8 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/fifth" element={<Fifth />} />
         <Route path="/sixth" element={<Sixth />} />
         <Route path="/seventh" element={<Seventh />} />
-
-
+        <Route path="/result" element={<Result />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
